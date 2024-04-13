@@ -128,7 +128,7 @@ export default class FixedAttributionIcon {
       this.handlePositioning();
     }
     if (this.shouldHandleSize) {
-      this.handleResize();
+      this.handleSize();
     }
   };
 }
