@@ -35,7 +35,6 @@ export default class FixedAttributionIcon {
   //TODO: set styles type to object
   private setElementStyles(styles: any) {
     for (let key in styles) {
-      console.log(key);
       //   container.style.setProperty(key, styles[key]);
       this.domElement.style[key as any] = styles[key];
     }
