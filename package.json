@@ -1,8 +1,9 @@
 {
   "name": "fixed-attribution-icon",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
