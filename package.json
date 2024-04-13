@@ -1,13 +1,13 @@
 {
   "name": "fixed-attribution-icon",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "update": "npm run build && npm run publish && git push"
+    "update": "npm run build && npm publish && git push"
   },
   "keywords": [],
   "author": "",
