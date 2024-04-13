@@ -1,6 +1,6 @@
 {
   "name": "fixed-attribution-icon",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
@@ -21,5 +21,13 @@
     "dotenv": "^16.0.3",
     "html-webpack-plugin": "^5.5.0",
     "webpack-cli": "^4.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ygshbht/fixed-attribution-icon"
+  },
+  "bugs": {
+    "url": "https://github.com/ygshbht/fixed-attribution-icon/issues"
+  },
+  "homepage": "https://github.com/ygshbht/fixed-attribution-icon#readme"
 }
