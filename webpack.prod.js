@@ -39,6 +39,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist", "src"),
     filename: "index.js",
+    library: {
+      name: "fixed-attribution-icon",
+      type: "umd",
+    },
   },
   devtool: "source-map",
   resolve: {

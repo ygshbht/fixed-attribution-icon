@@ -39,7 +39,7 @@ module.exports = {
   // required if using webpack-dev-server
   devServer: {
     // contentBase: "./dist",
-    port: 3000,
+    port: 3002,
     setupMiddlewares: (middlewares, devServer) => {
       devServer.app.use(
         "/",
