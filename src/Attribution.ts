@@ -2,6 +2,8 @@ import attributionIcon from "./icon";
 
 export default class FixedAttributionIcon {
   domElement!: HTMLDivElement;
+  shouldHandleSize = true;
+  shouldHandlePositioning = true;
   private attributionLinkElement!: HTMLAnchorElement;
 
   constructor(private attributionLink?: string) {
@@ -91,23 +93,42 @@ export default class FixedAttributionIcon {
   addResizeListener() {
     window.addEventListener("resize", this.handleResize);
   }
-  handleResize = () => {
-    let bottomRight = [30, 30];
+
+  handleSize() {
     if (innerWidth > 1200) {
       this.setSize(50, 50);
     } else if (innerWidth > 900) {
       this.setSize(40, 40);
-      bottomRight = [25, 25];
     } else if (innerWidth > 600) {
       this.setSize(30, 30);
-      bottomRight = [20, 20];
     } else {
       this.setSize(25, 25);
+    }
+  }
+
+  /** Handle bottom and right fixed position on resize */
+  handlePositioning() {
+    let bottomRight = [30, 30];
+    if (innerWidth > 1200) {
+    } else if (innerWidth > 900) {
+      bottomRight = [25, 25];
+    } else if (innerWidth > 600) {
+      bottomRight = [20, 20];
+    } else {
       bottomRight = [15, 15];
     }
     this.setElementStyles({
       bottom: `${bottomRight[0]}px`,
       right: `${bottomRight[1]}px`,
     });
+  }
+
+  handleResize = () => {
+    if (this.shouldHandlePositioning) {
+      this.handlePositioning();
+    }
+    if (this.shouldHandleSize) {
+      this.handleResize();
+    }
   };
 }
