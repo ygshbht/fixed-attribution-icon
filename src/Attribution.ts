@@ -1,6 +1,6 @@
 import attributionIcon from "./icon";
 
-/** Simply instatiate the class and it will add the icon automatically.
+/** Simply instantiate the class and it will add the icon automatically.
  *
  * Usage: new FixedAttributionIcon(url);
  *
